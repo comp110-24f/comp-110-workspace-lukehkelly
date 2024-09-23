@@ -1,7 +1,9 @@
-"""A welcoming test program to start COMP110"""
+def fuel_needed(distance: int, mpg: int) -> float:
+    return distance / mpg
 
-__author__ = "01234567"
 
-print("Welcome to COMP110!")
-print("You are in for a fun adventure into programming!")
-print("<3 the COMP110 Team!")
+def total_fuel_cost(distance: int, mpg: int, price_per_gallon: int) -> float:
+    return fuel_needed(distance=distance, mpg=mpg) * price_per_gallon
+
+
+print(total_fuel_cost(distance=300, mpg=25, price_per_gallon=4))
