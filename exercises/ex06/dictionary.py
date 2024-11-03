@@ -61,8 +61,8 @@ def alphabetizer(input_list: list[str]) -> dict[str, list[str]]:
 
 def update_attendance(input_dict: dict[str, list[str]], day: str, student: str) -> None:
 
-    if day in input_dict:
-        input_dict[day].append(student)
+    if day in input_dict:  # checks if day alr exists
+        input_dict[day].append(student)  # adds student to that day's list
     else:
-        input_dict[day] = [student]
+        input_dict[day] = [student]  # creates a new day containing that student
     return
